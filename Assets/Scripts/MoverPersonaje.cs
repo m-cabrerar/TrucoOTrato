@@ -14,6 +14,11 @@ public class MoverPersonaje : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        if (PlayerData.Instance != null)
+        {
+            transform.position = PlayerData.Instance.playerPosition;
+            transform.rotation = PlayerData.Instance.playerRotation;
+        }
     }
 
     // Update is called once per frame
