@@ -4,21 +4,22 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Inventory", menuName = "Inventory System/Inventory")]
 public class Inventory : ScriptableObject
 {
-    public const int SLOTS = 8;
-    public Dictionary<int, ItemData> items = new Dictionary<int, ItemData>();
+    public List<ItemData> items = new List<ItemData>();
 
     public void AddItem(int id)
     {
-        items[id].pickUp();
+        items[id].PickUp();
+        Debug.Log("Picked up " + items[id].itemName);
+        Debug.Log(items[id].isPickedUp);
     }
-    
-    public bool hasItem(int id)
+
+    public bool HasItem(int id)
     {
         return items[id].isPickedUp;
     }
     
     public void RemoveItem(int id)
     {
-        items[id].drop();
+        items[id].Drop();
     }
 }

@@ -12,12 +12,12 @@ public class ItemData : ScriptableObject
     public Sprite itemSprite;
     public GameObject itemPrefab;
 
-    public void pickUp()
+    public void PickUp()
     {
         isPickedUp = true;
     }
     
-    public void drop()
+    public void Drop()
     {
         isPickedUp = false;
     }
