@@ -7,11 +7,10 @@ using UnityEngine.UIElements;
 public class ItemController : MonoBehaviour
 {
     [SerializeField] private ItemData itemData;
-    [SerializeField] private Inventory inventory;
     
-    public void PickUp()
+    public void PickUp(Inventory inventory)
     {
-        inventory.AddItem(itemData.itemID);
+        inventory.AddItem(itemData);
         Destroy(gameObject);
     }
 
@@ -19,7 +18,8 @@ public class ItemController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            PickUp();
+            InventoryController inventoryController = other.GetComponent<InventoryController>();
+            PickUp(inventoryController.GetInventory());
         }
     }
 }

@@ -1,25 +1,33 @@
 using System.Collections.Generic;
+using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Inventory", menuName = "Inventory System/Inventory")]
 public class Inventory : ScriptableObject
 {
-    public List<ItemData> items = new List<ItemData>();
+    [SerializeField] private List<ItemData> items = new List<ItemData>();
+    private List<ItemData> itemsInventory = new List<ItemData>();
 
-    public void AddItem(int id)
+    // public void AddItem(int id)
+    // {
+    //     items[id].PickUp();
+    //     itemsInventory.Add(items[id]);
+    // }
+    public void AddItem(ItemData itemData)
     {
-        items[id].PickUp();
-        Debug.Log("Picked up " + items[id].itemName);
-        Debug.Log(items[id].isPickedUp);
+        itemData.PickUp();
+        itemsInventory.Add(itemData);
     }
 
-    public bool HasItem(int id)
-    {
-        return items[id].isPickedUp;
-    }
     
-    public void RemoveItem(int id)
+    public void RemoveItem(ItemData itemData)
     {
-        items[id].Drop();
+        itemData.Drop();
+        itemsInventory.Remove(itemData);
+    }
+
+    public List<ItemData> GetItems()
+    {
+        return itemsInventory;
     }
 }
