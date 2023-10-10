@@ -5,10 +5,26 @@ using UnityEngine;
 
 public class InventoryController : MonoBehaviour
 {
+    public static InventoryController Instance;
+
     [SerializeField] private Inventory inventory;
     private const KeyCode NEXT_ITEM = KeyCode.E;
     private const KeyCode PREV_ITEM = KeyCode.Q;
     private int selectedPos = -1;
+    
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -47,5 +63,15 @@ public class InventoryController : MonoBehaviour
         }
     }
     
+    public bool TratarDeUsarItem(ItemData item, bool consumirItemAlUsar)
+    {
+        bool pudoUsarse = inventory.HasItem(item);
+        if (pudoUsarse && consumirItemAlUsar)
+        {
+            inventory.RemoveItem(item);
+        }
+        return pudoUsarse;
+    }
+
     public Inventory GetInventory() { return inventory; }
 }
