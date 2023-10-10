@@ -18,6 +18,10 @@ public class BloqueadorItemNecesario : MonoBehaviour
 
     private void CheckItemToUse()
     {
-        InventoryController.Instance.TratarDeUsarItem(itemNecesario, consumeElItem);
+        bool sePudoUsar = InventoryController.Instance.TratarDeUsarItem(itemNecesario, consumeElItem);
+        if (sePudoUsar)
+        {
+            Destroy(gameObject);
+        }
     }
 }
