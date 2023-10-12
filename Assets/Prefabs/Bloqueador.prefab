@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 4672748838341503873}
   - component: {fileID: 3106547908030465102}
   - component: {fileID: 8087981650006904592}
+  - component: {fileID: 2956238510013801263}
   m_Layer: 0
-  m_Name: Door
+  m_Name: Bloqueador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,3 +106,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2956238510013801263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2749375609647389697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a77bfc2ce211974bbca17cac1070380, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemNecesario: {fileID: 0}
+  consumeElItem: 0
