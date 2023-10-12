@@ -9,7 +9,7 @@ public class ItemData : ScriptableObject
     
     public bool isPickedUp;
     
-    public Sprite itemSprite;
+    public Sprite sprite;
     public GameObject itemPrefab;
 
     public void PickUp()
