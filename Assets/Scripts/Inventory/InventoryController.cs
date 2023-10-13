@@ -8,6 +8,7 @@ public class InventoryController : MonoBehaviour
     public static InventoryController Instance;
 
     [SerializeField] private Inventory inventory;
+    [SerializeField] private InventoryUI _ui;
     private const KeyCode NEXT_ITEM = KeyCode.E;
     private const KeyCode PREV_ITEM = KeyCode.Q;
     private int selectedPos = -1;
@@ -45,6 +46,12 @@ public class InventoryController : MonoBehaviour
             itemSelect(false);
         }
         
+    }
+
+    public void AddItem(ItemData itemData)
+    {
+        inventory.AddItem(itemData);
+        _ui.AddItem(itemData);
     }
 
     public void itemSelect(bool next)

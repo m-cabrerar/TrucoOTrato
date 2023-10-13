@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9116845203353781541}
   - component: {fileID: 8812516654471233961}
   - component: {fileID: 6987834760722892836}
+  - component: {fileID: 6402882447465350664}
   m_Layer: 0
   m_Name: Inventory
   m_TagString: Untagged
@@ -102,6 +103,21 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &6402882447465350664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888713553814991180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad8acb8282c0dc4782eca84c4697322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemUiPrefab: {fileID: 3706618857703191686, guid: 06dfa729d84b62f46a56c0e13d6c2119, type: 3}
+  _itemContainer: {fileID: 1266700120325230531}
+  _items: []
 --- !u!1 &3191531089810952212
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,7 +128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2481153926727350590}
   - component: {fileID: 4274161955710514281}
-  - component: {fileID: 7964021651146299480}
+  - component: {fileID: 4255917412448299402}
   m_Layer: 0
   m_Name: SingletonNecesario
   m_TagString: Untagged
@@ -150,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPosition: {x: 0, y: 0, z: 0}
   playerRotation: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &7964021651146299480
+--- !u!114 &4255917412448299402
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,12 +175,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3191531089810952212}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fad8acb8282c0dc4782eca84c4697322, type: 3}
+  m_Script: {fileID: 11500000, guid: 02e467aff07ee384c8ba435dc46438e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _itemUiPrefab: {fileID: 3706618857703191686, guid: 06dfa729d84b62f46a56c0e13d6c2119, type: 3}
-  _itemContainer: {fileID: 1266700120325230531}
-  _items: []
+  inventory: {fileID: 11400000, guid: 11a72b68b3608274b81416c1292d7bd9, type: 2}
+  _ui: {fileID: 6402882447465350664}
 --- !u!1 &5401511536834407690
 GameObject:
   m_ObjectHideFlags: 0
