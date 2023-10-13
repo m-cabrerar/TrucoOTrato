@@ -8,6 +8,14 @@ public class BloqueadorItemNecesario : MonoBehaviour
     [SerializeField] private ItemData itemNecesario;
     [SerializeField] private bool consumeElItem;
 
+    private void Start()
+    {
+        if (itemNecesario.hasBeenUsed)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void OnCollisionEnter(Collision other)
     {
         Debug.Log(other.collider.name);

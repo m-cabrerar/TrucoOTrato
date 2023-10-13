@@ -8,6 +8,7 @@ public class ItemData : ScriptableObject
     [TextArea] public string itemDescription;
     
     public bool isPickedUp;
+    public bool hasBeenUsed;
     
     public Sprite sprite;
     public GameObject itemPrefab;

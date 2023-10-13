@@ -4,8 +4,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Inventory", menuName = "Inventory System/Inventory")]
 public class Inventory : ScriptableObject
 {
-    [SerializeField] private List<ItemData> items = new List<ItemData>();
-    private List<ItemData> itemsInventory = new List<ItemData>();
+    // [SerializeField] private List<ItemData> items = new List<ItemData>();
+    [SerializeField] private List<ItemData> itemsInventory = new List<ItemData>();
 
     // public void AddItem(int id)
     // {

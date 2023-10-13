@@ -75,6 +75,7 @@ public class InventoryController : MonoBehaviour
         bool pudoUsarse = inventory.HasItem(item);
         if (pudoUsarse && consumirItemAlUsar)
         {
+            item.hasBeenUsed = true;
             inventory.RemoveItem(item);
         }
         return pudoUsarse;
