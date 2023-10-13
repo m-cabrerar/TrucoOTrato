@@ -116,8 +116,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemUiPrefab: {fileID: 3706618857703191686, guid: 06dfa729d84b62f46a56c0e13d6c2119, type: 3}
-  _itemContainer: {fileID: 1266700120325230531}
-  _items: []
+  _contenedorDeIconos: {fileID: 1266700120325230531}
+  _iconos: []
 --- !u!1 &3191531089810952212
 GameObject:
   m_ObjectHideFlags: 0

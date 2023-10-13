@@ -50,8 +50,8 @@ public class InventoryController : MonoBehaviour
 
     public void AddItem(ItemData itemData)
     {
-        inventory.AddItem(itemData);
-        _ui.AddItem(itemData);
+        inventory?.AddItem(itemData);
+        _ui?.AddItem(itemData);
     }
 
     public void itemSelect(bool next)
@@ -75,9 +75,15 @@ public class InventoryController : MonoBehaviour
         bool pudoUsarse = inventory.HasItem(item);
         if (pudoUsarse && consumirItemAlUsar)
         {
-            inventory.RemoveItem(item);
+            RemoveItem(item);
         }
         return pudoUsarse;
+    }
+
+    private void RemoveItem(ItemData item)
+    {
+        inventory?.RemoveItem(item);
+        _ui?.RemoveItem(item);
     }
 
     public Inventory GetInventory() { return inventory; }

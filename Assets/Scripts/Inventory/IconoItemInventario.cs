@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Image))]
-public class InventoryItemUI : MonoBehaviour
+public class IconoItemInventario : MonoBehaviour
 {
     [SerializeField] private Image _icono;
     [SerializeField] private ItemData _item;
@@ -20,6 +20,9 @@ public class InventoryItemUI : MonoBehaviour
     public void ActualizarIcono(ItemData item)
     {
         _item = item;
-        _icono.sprite = item.sprite;
+        if (item.sprite != null)
+        {
+            _icono.sprite = item.sprite;
+        }
     }
 }

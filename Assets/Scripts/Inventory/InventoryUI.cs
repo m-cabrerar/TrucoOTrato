@@ -6,11 +6,11 @@ using UnityEngine;
 public class InventoryUI : MonoBehaviour
 {
     [Header("Settings")]
-    [SerializeField] private InventoryItemUI _itemUiPrefab;
-    [SerializeField] private RectTransform _itemContainer;
+    [SerializeField] private IconoItemInventario _itemUiPrefab;
+    [SerializeField] private RectTransform _contenedorDeIconos;
     
     [Header("Debug")]
-    [SerializeField] private List<InventoryItemUI> _items = new List<InventoryItemUI>();
+    [SerializeField] private List<IconoItemInventario> _iconos = new List<IconoItemInventario>();
 
     public void AddItem(ItemData item)
     {
@@ -19,12 +19,20 @@ public class InventoryUI : MonoBehaviour
         {
             return;
         }
-        InventoryItemUI nuevoIconoItem = Instantiate<InventoryItemUI>(_itemUiPrefab);
-        nuevoIconoItem.transform.SetParent(_itemContainer);
+        IconoItemInventario nuevoIconoItem = Instantiate<IconoItemInventario>(_itemUiPrefab);
+        nuevoIconoItem.transform.SetParent(_contenedorDeIconos);
         nuevoIconoItem.transform.localScale = Vector3.one;
 
         nuevoIconoItem.ActualizarIcono(item);
 
-        _items.Add(nuevoIconoItem);
+        _iconos.Add(nuevoIconoItem);
+    }
+
+    public void RemoveItem(ItemData item)
+    {
+        foreach (IconoItemInventario icono in _iconos)
+        {
+            
+        }
     }
 }
