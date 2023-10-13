@@ -8,9 +8,10 @@ public class BloqueadorItemNecesario : MonoBehaviour
     [SerializeField] private ItemData itemNecesario;
     [SerializeField] private bool consumeElItem;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
-        if (other.CompareTag("Player"))
+        Debug.Log(other.collider.name);
+        if (other.collider.CompareTag("Player"))
         {
             CheckItemToUse();
         }

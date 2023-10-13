@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puerta Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2956238510013801263, guid: d7d3c0bae07b56c4d896702802c71ef9, type: 3}
+      propertyPath: consumeElItem
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956238510013801263, guid: d7d3c0bae07b56c4d896702802c71ef9, type: 3}
+      propertyPath: itemNecesario
+      value: 
+      objectReference: {fileID: 11400000, guid: bf4645558e8260d4594ee648c625e4d7, type: 2}
     - target: {fileID: 8178100253368575599, guid: d7d3c0bae07b56c4d896702802c71ef9, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.6056123
@@ -63,27 +71,5 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2749375609647389697, guid: d7d3c0bae07b56c4d896702802c71ef9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1235309651526285377}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7d3c0bae07b56c4d896702802c71ef9, type: 3}
---- !u!1 &7558568956508172313 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2749375609647389697, guid: d7d3c0bae07b56c4d896702802c71ef9, type: 3}
-  m_PrefabInstance: {fileID: 5675328174919068696}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1235309651526285377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7558568956508172313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a77bfc2ce211974bbca17cac1070380, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemNecesario: {fileID: 11400000, guid: bf4645558e8260d4594ee648c625e4d7, type: 2}
-  consumeElItem: 1
