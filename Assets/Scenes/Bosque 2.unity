@@ -507,15 +507,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2481153926727350590, guid: 7c68dc3d248c5b6488f7564a13e39c64, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.963058
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2481153926727350590, guid: 7c68dc3d248c5b6488f7564a13e39c64, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0000019073486
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2481153926727350590, guid: 7c68dc3d248c5b6488f7564a13e39c64, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.1517763
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2481153926727350590, guid: 7c68dc3d248c5b6488f7564a13e39c64, type: 3}
       propertyPath: m_LocalRotation.w
@@ -548,6 +548,18 @@ PrefabInstance:
     - target: {fileID: 3191531089810952212, guid: 7c68dc3d248c5b6488f7564a13e39c64, type: 3}
       propertyPath: m_Name
       value: SingletonNecesario
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274161955710514281, guid: 7c68dc3d248c5b6488f7564a13e39c64, type: 3}
+      propertyPath: playerPosition.x
+      value: -3.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274161955710514281, guid: 7c68dc3d248c5b6488f7564a13e39c64, type: 3}
+      propertyPath: playerPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274161955710514281, guid: 7c68dc3d248c5b6488f7564a13e39c64, type: 3}
+      propertyPath: playerPosition.z
+      value: -2.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -960,7 +972,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
