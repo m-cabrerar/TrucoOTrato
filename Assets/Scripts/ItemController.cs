@@ -7,6 +7,14 @@ public class ItemController : MonoBehaviour
 {
     [SerializeField] private ItemData itemData;
     
+    private void Start()
+    {
+        if (InventoryController.Instance.HasItem(itemData))
+        {
+            Destroy(gameObject);
+        }    
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
