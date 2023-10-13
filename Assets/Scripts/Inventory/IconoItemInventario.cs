@@ -25,4 +25,9 @@ public class IconoItemInventario : MonoBehaviour
             _icono.sprite = item.sprite;
         }
     }
+
+    public ItemData Data()
+    {
+        return _item;
+    }
 }

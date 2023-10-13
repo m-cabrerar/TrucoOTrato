@@ -32,7 +32,13 @@ public class InventoryUI : MonoBehaviour
     {
         foreach (IconoItemInventario icono in _iconos)
         {
-            
+            if (icono.Data() != item)
+            {
+                continue;
+            }
+            _iconos.Remove(icono);
+            Destroy(icono.gameObject);
+            return;
         }
     }
 }
