@@ -7,8 +7,9 @@ public class InventoryController : MonoBehaviour
 {
     public static InventoryController Instance;
 
-    [SerializeField] private Inventory inventory;
     [SerializeField] private InventoryUI _ui;
+    [SerializeField] private List<ItemData> _inventory = new List<ItemData>();
+    [SerializeField] private List<ItemData> _itemsConsumidos = new List<ItemData>();
     private const KeyCode NEXT_ITEM = KeyCode.E;
     private const KeyCode PREV_ITEM = KeyCode.Q;
     private int selectedPos = -1;
@@ -32,7 +33,7 @@ public class InventoryController : MonoBehaviour
         {
             if (selectedPos != -1)
             {
-                ItemData itemData = inventory.GetItems()[selectedPos];
+                ItemData itemData = _inventory[selectedPos];
                 Debug.Log(itemData.itemName);
             }
         }
@@ -48,10 +49,11 @@ public class InventoryController : MonoBehaviour
         
     }
 
-    public void AddItem(ItemData itemData)
+    public void AddItem(ItemData item)
     {
-        inventory?.AddItem(itemData);
-        _ui?.AddItem(itemData);
+        item.PickUp();
+        _inventory.Add(item);
+        _ui?.AddItem(item);
     }
 
     public void itemSelect(bool next)
@@ -59,38 +61,42 @@ public class InventoryController : MonoBehaviour
         if (next)
         {
             selectedPos++;
-            if (selectedPos >= inventory.GetItems().Count)
+            if (selectedPos >= _inventory.Count)
                 selectedPos = 0;
         }
         else
         {
             selectedPos--;
             if (selectedPos < 0)
-                selectedPos = inventory.GetItems().Count - 1;
+                selectedPos = _inventory.Count - 1;
         }
     }
     
     public bool TratarDeUsarItem(ItemData item, bool consumirItemAlUsar)
     {
-        bool pudoUsarse = inventory.HasItem(item);
-        if (pudoUsarse && consumirItemAlUsar)
+        bool tengoElItem = HasItem(item);
+        if (tengoElItem && consumirItemAlUsar)
         {
-            item.hasBeenUsed = true;
-            inventory.RemoveItem(item);
+            _itemsConsumidos.Add(item);
+            RemoveItem(item);
         }
-        return pudoUsarse;
+        return tengoElItem;
+    }
+
+    public bool FueConsumido(ItemData item)
+    {
+        return _itemsConsumidos.Contains(item);
     }
 
     public bool HasItem(ItemData item)
     {
-        return inventory.HasItem(item);
+        return _inventory.Contains(item);
     }
 
     private void RemoveItem(ItemData item)
     {
-        inventory?.RemoveItem(item);
+        item.Drop();
+        _inventory?.Remove(item);
         _ui?.RemoveItem(item);
     }
-
-    public Inventory GetInventory() { return inventory; }
 }

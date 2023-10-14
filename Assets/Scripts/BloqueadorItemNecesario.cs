@@ -10,7 +10,13 @@ public class BloqueadorItemNecesario : MonoBehaviour
 
     private void Start()
     {
-        if (itemNecesario.hasBeenUsed)
+        if (itemNecesario == null)
+        {
+            Debug.Log($"El bloqueador {this} no tiene especificado su Item Necesario. Agregarlo!");
+            return;
+        }
+
+        if (InventoryController.Instance.FueConsumido(itemNecesario))
         {
             Destroy(gameObject);
         }
