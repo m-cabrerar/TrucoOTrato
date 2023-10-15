@@ -8,6 +8,8 @@ public class CambiarEscena : MonoBehaviour
 {
     [SerializeField] private Vector3 nuevaPosisionJugador;
     [SerializeField] private Vector3 nuevaRotacionJugador;
+    [SerializeField, Tooltip("En caso de ser NONE, se ira a la escena con el indice Escena A Cargar")]
+    private Escena nombreEscenaACargar = Escena.NONE;
     [SerializeField] private int escenaACargar;
 
     private bool cambioDeEscenaRealizado = false;
@@ -23,7 +25,14 @@ public class CambiarEscena : MonoBehaviour
         {
             PlayerData.Instance.playerPosition = nuevaPosisionJugador;
             PlayerData.Instance.playerRotation = Quaternion.Euler(nuevaRotacionJugador);
-            SceneManager.LoadScene(escenaACargar);
+            if (nombreEscenaACargar == Escena.NONE)
+            {
+                SceneManager.LoadScene(escenaACargar);
+            }
+            else
+            {
+                SceneManager.LoadScene((int)nombreEscenaACargar);
+            }
             cambioDeEscenaRealizado = true;
         }
     }

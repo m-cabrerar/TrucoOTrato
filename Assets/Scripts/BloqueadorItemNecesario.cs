@@ -8,9 +8,24 @@ public class BloqueadorItemNecesario : MonoBehaviour
     [SerializeField] private ItemData itemNecesario;
     [SerializeField] private bool consumeElItem;
 
-    private void OnTriggerEnter(Collider other)
+    private void Start()
     {
-        if (other.CompareTag("Player"))
+        if (itemNecesario == null)
+        {
+            Debug.Log($"El bloqueador {this} no tiene especificado su Item Necesario. Agregarlo!");
+            return;
+        }
+
+        if (InventoryController.Instance.FueConsumido(itemNecesario))
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        Debug.Log(other.collider.name);
+        if (other.collider.CompareTag("Player"))
         {
             CheckItemToUse();
         }
