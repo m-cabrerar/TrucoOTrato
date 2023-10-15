@@ -505,6 +505,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5920258494325684710, guid: 7a02f911f689cdc47a6ba4fee1b3d979, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7262088155889838785, guid: 7a02f911f689cdc47a6ba4fee1b3d979, type: 3}
       propertyPath: m_Name
       value: TestCharacterWalk
