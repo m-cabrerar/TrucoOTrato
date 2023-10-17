@@ -4,53 +4,38 @@ using UnityEngine;
 
 public class MoveObject : MonoBehaviour
 {
-   public GameObject HandPoint;
+  public GameObject HandPoint;
 
-   private GameObject pickedObject = null;
+  private GameObject pickedObject = null;
 
-
-   
-    void Update()
+  void Update()
+  {
+    if (pickedObject!=null)
     {
-      if (pickedObject!=null)
+      if (Input.GetKey("r"))
       {
-        if (Input.GetKey("r"))
-        {
-            pickedObject.GetComponent<Rigidbody>().useGravity=true;
-
-            pickedObject.GetComponent<Rigidbody>().isKinematic = false;
-            pickedObject.gameObject.transform.SetParent(null);
-            pickedObject = null;
-
-        }
+          pickedObject.GetComponent<Rigidbody>().useGravity = true;
+          pickedObject.GetComponent<Rigidbody>().isKinematic = false;
+          pickedObject.GetComponent<Collider>().enabled = true;
+          pickedObject.gameObject.transform.SetParent(null);
+          pickedObject = null;
       }
-
-    
-        
     }
-    private void OnTriggerStay (Collider other)
+  }
+
+  private void OnTriggerStay (Collider other)
+  {
+    if (other.gameObject.CompareTag("Object"))
     {
-      if (other.gameObject.CompareTag("Object"))
+      if (Input.GetKey("e") && pickedObject==null )
       {
-        if (Input.GetKey("e") && pickedObject==null )
-        {
-            other.GetComponent<Rigidbody>().useGravity=false;
-
-            other.GetComponent<Rigidbody>().isKinematic = true;
-            other.enabled = false;
-            other.transform.position = HandPoint.transform.position;
-
-            other.gameObject.transform.SetParent(HandPoint.gameObject.transform);
-
-            pickedObject = other.gameObject;
-
-        }
-
+          other.GetComponent<Rigidbody>().useGravity = false;
+          other.GetComponent<Rigidbody>().isKinematic = true;
+          other.enabled = false;
+          other.transform.position = HandPoint.transform.position;
+          other.gameObject.transform.SetParent(HandPoint.gameObject.transform);
+          pickedObject = other.gameObject;
       }
-
     }
-   
-
-
-
-} 
+  }
+}

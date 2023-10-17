@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1039,6 +1039,7 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1335081330}
   m_SourcePrefab: {fileID: 100100000, guid: a6a256ff60a36f9438cd61101f60af78, type: 3}
+<<<<<<< HEAD
 --- !u!1 &505351049
 GameObject:
   m_ObjectHideFlags: 0
@@ -1551,6 +1552,9 @@ MonoBehaviour:
   nuevaPosisionJugador: {x: -20, y: 1, z: -10}
   enEspera: 0
 --- !u!1001 &835045276
+=======
+--- !u!1001 &536607635
+>>>>>>> 47368640e8f08e0dbf33bc8fab0e3a5460b6958a
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1558,6 +1562,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 1858049678923559948, guid: a6a256ff60a36f9438cd61101f60af78, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -2139,6 +2144,57 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2140756965}
   m_SourcePrefab: {fileID: 100100000, guid: a6a256ff60a36f9438cd61101f60af78, type: 3}
+=======
+    - target: {fileID: 2481153926727350590, guid: 7c68dc3d248c5b6488f7564a13e39c64, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481153926727350590, guid: 7c68dc3d248c5b6488f7564a13e39c64, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481153926727350590, guid: 7c68dc3d248c5b6488f7564a13e39c64, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481153926727350590, guid: 7c68dc3d248c5b6488f7564a13e39c64, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481153926727350590, guid: 7c68dc3d248c5b6488f7564a13e39c64, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481153926727350590, guid: 7c68dc3d248c5b6488f7564a13e39c64, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481153926727350590, guid: 7c68dc3d248c5b6488f7564a13e39c64, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481153926727350590, guid: 7c68dc3d248c5b6488f7564a13e39c64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481153926727350590, guid: 7c68dc3d248c5b6488f7564a13e39c64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481153926727350590, guid: 7c68dc3d248c5b6488f7564a13e39c64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191531089810952212, guid: 7c68dc3d248c5b6488f7564a13e39c64, type: 3}
+      propertyPath: m_Name
+      value: SingletonNecesario
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7c68dc3d248c5b6488f7564a13e39c64, type: 3}
+>>>>>>> 47368640e8f08e0dbf33bc8fab0e3a5460b6958a
 --- !u!1 &1122412048
 GameObject:
   m_ObjectHideFlags: 0
@@ -4096,6 +4152,7 @@ SceneRoots:
   - {fileID: 1373291543}
   - {fileID: 1686729722254514470}
   - {fileID: 477498113}
+<<<<<<< HEAD
   - {fileID: 1988587207}
   - {fileID: 1502972349}
   - {fileID: 333830567}
@@ -4131,3 +4188,6 @@ SceneRoots:
   - {fileID: 2128712285}
   - {fileID: 1520740308}
   - {fileID: 1577998771}
+=======
+  - {fileID: 536607635}
+>>>>>>> 47368640e8f08e0dbf33bc8fab0e3a5460b6958a
