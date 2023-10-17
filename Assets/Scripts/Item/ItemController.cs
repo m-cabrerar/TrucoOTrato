@@ -9,18 +9,15 @@ public class ItemController : MonoBehaviour
     
     private void Start()
     {
-        if (InventoryController.Instance.HasItem(itemData))
-        {
+        if (InventoryController.Instance.HasItem(itemData) 
+        || InventoryController.Instance.FueConsumido(itemData))
             Destroy(gameObject);
-        }    
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
-        {
             PickUp();
-        }
     }
 
     private void PickUp()
