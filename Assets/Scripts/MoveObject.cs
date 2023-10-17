@@ -37,7 +37,7 @@ public class MoveObject : MonoBehaviour
             other.GetComponent<Rigidbody>().useGravity=false;
 
             other.GetComponent<Rigidbody>().isKinematic = true;
-
+            other.enabled = false;
             other.transform.position = HandPoint.transform.position;
 
             other.gameObject.transform.SetParent(HandPoint.gameObject.transform);
