@@ -382,19 +382,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SingletonNecesario
       objectReference: {fileID: 0}
-    - target: {fileID: 7954181710855453655, guid: 7c68dc3d248c5b6488f7564a13e39c64, type: 3}
-      propertyPath: m_Text
-      value: 'WASD - Moverse
-
-        E - Agarrar
-
-        R - Soltar
-
-        1,2,3
-        - Cambiar de escena
-
-        Build 17/10/23'
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -499,7 +486,7 @@ Transform:
   m_GameObject: {fileID: 1029945425}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.155, y: 0.12, z: 3.9136}
+  m_LocalPosition: {x: 0.155, y: -1.08, z: 3.9136}
   m_LocalScale: {x: 1.6538162, y: 0.17351653, z: 9.978587}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -754,7 +741,7 @@ Transform:
   m_GameObject: {fileID: 1229695505}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.03, z: 1}
+  m_LocalPosition: {x: 1, y: -1.1700001, z: 1}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -923,7 +910,7 @@ Transform:
   m_GameObject: {fileID: 1731680099}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.15860248, y: 0.1869902, z: 0.18899345}
+  m_LocalPosition: {x: 0.15860248, y: -1.0130098, z: 0.18899345}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1115,7 +1102,7 @@ Transform:
   m_GameObject: {fileID: 1910342922}
   serializedVersion: 2
   m_LocalRotation: {x: 0.23462452, y: 0.0019587316, z: 0.0009814616, w: 0.9720837}
-  m_LocalPosition: {x: 2.412527, y: 2.9819999, z: -0.6440792}
+  m_LocalPosition: {x: 2.412527, y: 4.22, z: -2.95}
   m_LocalScale: {x: 1.4696801, y: 1.4696801, z: 1.250859}
   m_ConstrainProportionsScale: 0
   m_Children: []
