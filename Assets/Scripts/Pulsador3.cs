@@ -1,18 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class Pulsador2 : MonoBehaviour
+public class Pulsador3 : MonoBehaviour
 {
-    public MovimientoPortalPulsadores controlMov;
-    public float distAMoverY = 0.1f;
-    private void OnTriggerStay(Collider other)
+    public ControlPortalLaberinto controlPortalLab;
+
+    private void OnTriggerEnter(Collider other)
     {
         Vector3 posicionActual = transform.position;
         posicionActual.y = 0.15f;
         transform.position = posicionActual;
-        controlMov.setPulsador2(true);
+        controlPortalLab.setPulsador3(false);
     }
     
     private void OnTriggerExit(Collider other)
@@ -20,6 +20,6 @@ public class Pulsador2 : MonoBehaviour
         Vector3 posicionActual = transform.position;
         posicionActual.y = 0.25f;
         transform.position = posicionActual;
-        controlMov.setPulsador2(false);
+        controlPortalLab.setPulsador3(true);
     }
 }

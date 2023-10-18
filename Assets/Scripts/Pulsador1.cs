@@ -6,11 +6,10 @@ using UnityEngine;
 public class Pulsador1 : MonoBehaviour
 {
     public MovimientoPortalPulsadores controlMov;
-    public float distAMoverY = 0.125f;
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         Vector3 posicionActual = transform.position;
-        posicionActual.y -= distAMoverY;
+        posicionActual.y = 0.15f;
         transform.position = posicionActual;
         controlMov.setPulsador1(true);
     }
@@ -18,7 +17,7 @@ public class Pulsador1 : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         Vector3 posicionActual = transform.position;
-        posicionActual.y += distAMoverY;
+        posicionActual.y = 0.25f;
         transform.position = posicionActual;
         controlMov.setPulsador1(false);
     }

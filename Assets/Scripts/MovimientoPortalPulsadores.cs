@@ -6,7 +6,7 @@ public class MovimientoPortalPulsadores : MonoBehaviour
 {
     public Transform portalAMover;
 
-    public float velocidadMov = 1.0f;
+    public float velocidadMov = 3.0f;
 
     private bool pulsador1Activado = false;
     private bool pulsador2Activado = false;
@@ -25,12 +25,12 @@ public class MovimientoPortalPulsadores : MonoBehaviour
         if (pulsador1Activado && pulsador2Activado)
         {
             portalAMover.position =
-                Vector3.Lerp(portalAMover.position, nuevaPosicion, velocidadMov * Time.deltaTime);
+                Vector3.Lerp(portalAMover.position, nuevaPosicion, velocidadMov);
         }
         else
         {
             portalAMover.position =
-                Vector3.Lerp(portalAMover.position, posicionOriginal, velocidadMov * Time.deltaTime);
+                Vector3.Lerp(portalAMover.position, posicionOriginal, velocidadMov);
         }
     }
 
