@@ -39,8 +39,8 @@ public class MoverPersonaje : MonoBehaviour
         float velocidadActual = Input.GetKey(KeyCode.LeftShift) ? velocidadAumentada : velocidadBase;
 
         Vector3 velocidadFinal = movimiento.normalized * velocidadActual;
-
+        velocidadFinal.y = rb.velocity.y;
         //Aplica el movimiento al Rigidbody
-        rb.velocity = velocidadFinal + Vector3.up * rb.velocity.y;
+        rb.velocity = velocidadFinal;
     }
 }
