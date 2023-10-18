@@ -41,6 +41,6 @@ public class MoverPersonaje : MonoBehaviour
         Vector3 velocidadFinal = movimiento.normalized * velocidadActual;
 
         //Aplica el movimiento al Rigidbody
-        rb.velocity = velocidadFinal;
+        rb.velocity = velocidadFinal + Vector3.up * rb.velocity.y;
     }
 }
