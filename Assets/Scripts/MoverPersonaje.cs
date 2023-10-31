@@ -6,6 +6,8 @@ public class MoverPersonaje : MonoBehaviour
 {
     public float velocidadBase = 5.0f;
     public float velocidadAumentada = 10.0f;
+    [SerializeField] private Animator _animator;
+    [SerializeField] private float _animatorSpeed = 1;
     private Rigidbody rb;
 
     float movimientoHorizontal;
@@ -42,5 +44,8 @@ public class MoverPersonaje : MonoBehaviour
         velocidadFinal.y = rb.velocity.y;
         //Aplica el movimiento al Rigidbody
         rb.velocity = velocidadFinal;
+
+        _animator.SetBool("EstaCaminando", movimientoHorizontal != 0 || movimientoVertical != 0);
+        _animator.speed = _animatorSpeed;
     }
 }
