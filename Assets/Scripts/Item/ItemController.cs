@@ -22,6 +22,8 @@ public class ItemController : MonoBehaviour
 
     private void PickUp()
     {
+        if (itemData.itemDescription != "") 
+            DialogoController.Instance.MostrarDialogo(itemData.itemDescription);
         InventoryController.Instance.AddItem(itemData);
         Destroy(gameObject);
     }

@@ -7,6 +7,7 @@ public class BloqueadorItemNecesario : MonoBehaviour
 {
     [SerializeField] private ItemData itemNecesario;
     [SerializeField] private bool consumeElItem;
+    [SerializeField] [TextArea] private string dialogo = "";
 
     private void Start()
     {
@@ -36,6 +37,9 @@ public class BloqueadorItemNecesario : MonoBehaviour
         bool sePudoUsar = InventoryController.Instance.TratarDeUsarItem(itemNecesario, consumeElItem);
         if (sePudoUsar)
         {
+            if (dialogo != "")
+                DialogoController.Instance.MostrarDialogo(dialogo);
+            
             Destroy(gameObject);
         }
     }

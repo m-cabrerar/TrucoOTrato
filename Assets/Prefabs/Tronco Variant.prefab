@@ -87,6 +87,10 @@ PrefabInstance:
       value: Tronco Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2956238510013801263, guid: d7d3c0bae07b56c4d896702802c71ef9, type: 3}
+      propertyPath: dialogo
+      value: "El hacha se rompi\xF3!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956238510013801263, guid: d7d3c0bae07b56c4d896702802c71ef9, type: 3}
       propertyPath: consumeElItem
       value: 1
       objectReference: {fileID: 0}
