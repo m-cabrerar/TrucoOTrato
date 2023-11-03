@@ -8616,7 +8616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nuevaPosisionJugador: {x: -8, y: 1, z: 9}
   nuevaRotacionJugador: {x: 0, y: 180, z: 0}
-  nombreEscenaACargar: 1
+  nombreEscenaACargar: 2
   escenaACargar: 0
 --- !u!65 &1633192466
 BoxCollider:

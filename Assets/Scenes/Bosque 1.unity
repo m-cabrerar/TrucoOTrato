@@ -6477,7 +6477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nuevaPosisionJugador: {x: -3.28, y: 1, z: -2.25}
   nuevaRotacionJugador: {x: 0, y: 0, z: 0}
-  nombreEscenaACargar: -1
+  nombreEscenaACargar: 2
   escenaACargar: 1
 --- !u!65 &324294721
 BoxCollider:
@@ -9560,7 +9560,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 6803cfd605f04df4faab21fbb8eb3498, type: 3}
     m_FontSize: 36
     m_FontStyle: 0
     m_BestFit: 0
@@ -42593,8 +42593,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -467.20996, y: -253.09998}
-  m_SizeDelta: {x: -920, y: 337}
+  m_AnchoredPosition: {x: -488.705, y: -262.05}
+  m_SizeDelta: {x: -962.99005, y: 337}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1905409163
 MonoBehaviour:
