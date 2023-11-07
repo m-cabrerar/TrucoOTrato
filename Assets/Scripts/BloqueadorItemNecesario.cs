@@ -25,7 +25,6 @@ public class BloqueadorItemNecesario : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log(other.collider.name);
         if (other.collider.CompareTag("Player"))
         {
             CheckItemToUse();

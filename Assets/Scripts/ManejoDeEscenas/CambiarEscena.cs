@@ -25,15 +25,8 @@ public class CambiarEscena : MonoBehaviour
         {
             PlayerData.Instance.playerPosition = nuevaPosisionJugador;
             PlayerData.Instance.playerRotation = Quaternion.Euler(nuevaRotacionJugador);
-            if (nombreEscenaACargar == Escena.NONE)
-            {
-                SceneManager.LoadScene(escenaACargar);
-            }
-            else
-            {
-                SceneManager.LoadScene((int)nombreEscenaACargar);
-            }
             cambioDeEscenaRealizado = true;
+            TransitionScreen.Instance.TransitionTo(nombreEscenaACargar, escenaACargar);
         }
     }
 }
