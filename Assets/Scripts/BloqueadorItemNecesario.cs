@@ -3,11 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BloqueadorItemNecesario : MonoBehaviour
+public class BloqueadorItemNecesario : Bloqueador
 {
     [SerializeField] private ItemData itemNecesario;
     [SerializeField] private bool consumeElItem;
-    [SerializeField] [TextArea] private string dialogo = "";
 
     private void Start()
     {
@@ -22,24 +21,9 @@ public class BloqueadorItemNecesario : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    private void OnCollisionEnter(Collision other)
+    
+    protected override bool cumpleRequisito()
     {
-        if (other.collider.CompareTag("Player"))
-        {
-            CheckItemToUse();
-        }
-    }
-
-    private void CheckItemToUse()
-    {
-        bool sePudoUsar = InventoryController.Instance.TratarDeUsarItem(itemNecesario, consumeElItem);
-        if (sePudoUsar)
-        {
-            if (dialogo != "")
-                DialogoController.Instance.MostrarDialogo(dialogo);
-            
-            Destroy(gameObject);
-        }
+        return InventoryController.Instance.TratarDeUsarItem(itemNecesario, consumeElItem);
     }
 }

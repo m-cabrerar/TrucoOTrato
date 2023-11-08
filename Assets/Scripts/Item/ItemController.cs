@@ -16,14 +16,19 @@ public class ItemController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (!other.CompareTag("Player")) return;
+        if (DialogoController.Instance.Mostrado(itemData.dialogoNecesario))
+        {
             PickUp();
+            DialogoController.Instance.MostrarDialogo(itemData.dialogoOnPickUp, gameObject.name + "OnPickUp");
+        }
+        else 
+            DialogoController.Instance.MostrarDialogo(itemData.dialogoOnInspect, gameObject.name + "OnInspect");
+
     }
 
     private void PickUp()
     {
-        if (itemData.itemDescription != "") 
-            DialogoController.Instance.MostrarDialogo(itemData.itemDescription);
         InventoryController.Instance.AddItem(itemData);
         Destroy(gameObject);
     }

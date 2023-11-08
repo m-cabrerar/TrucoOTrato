@@ -11,6 +11,8 @@ public class DialogoController : MonoBehaviour
     
     [SerializeField] private Text dialogo;
     [SerializeField] private float dialogoTiempo = 3f;
+    private HashSet<string> dialogosMostrados = new() {};
+    public const string MOSTRAR_SIEMPRE = "";
     void Start()
     {
         gameObject.SetActive(false);
@@ -28,12 +30,27 @@ public class DialogoController : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
-    public void MostrarDialogo(string dialogo)
+    public void MostrarDialogo(Dialogo dialogo, string id)
     {
+        MostrarDialogo(dialogo.dialogo, id, dialogo.mostrarUnaVez);
+    }
+    public void MostrarDialogo(string dialogo, string id = "", bool mostrarUnaVez = false)
+    {
+        if (dialogo.Trim().Equals("")) return;
+        if (mostrarUnaVez && Mostrado(id)) return;
+        foreach (var d in dialogosMostrados)
+        {
+            Debug.Log(d);
+        }
+        dialogosMostrados.Add(id);
         this.dialogo.text = dialogo;
         gameObject.SetActive(true);
         Invoke(nameof(OcultarDialogo), dialogoTiempo);
+    }
+    
+    public bool Mostrado(string id)
+    {
+        return !id.Equals(MOSTRAR_SIEMPRE) && dialogosMostrados.Contains(id);
     }
     
     public void OcultarDialogo()
