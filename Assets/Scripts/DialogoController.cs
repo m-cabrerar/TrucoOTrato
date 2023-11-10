@@ -36,7 +36,7 @@ public class DialogoController : MonoBehaviour
     }
     public void MostrarDialogo(string dialogo, string id = "", bool mostrarUnaVez = false)
     {
-        if (dialogo.Trim().Equals("")) return;
+        if (dialogo == null || dialogo.Trim().Equals("")) return;
         if (mostrarUnaVez && Mostrado(id)) return;
         foreach (var d in dialogosMostrados)
         {
@@ -50,7 +50,7 @@ public class DialogoController : MonoBehaviour
     
     public bool Mostrado(string id)
     {
-        return !id.Equals(MOSTRAR_SIEMPRE) && dialogosMostrados.Contains(id);
+        return id.Equals(MOSTRAR_SIEMPRE) || dialogosMostrados.Contains(id);
     }
     
     public void OcultarDialogo()

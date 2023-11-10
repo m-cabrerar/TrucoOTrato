@@ -223,7 +223,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.49863988, w: 0.86680925}
   m_LocalPosition: {x: 3.602, y: 0.891, z: 7.992}
-  m_LocalScale: {x: 0.042211, y: 4.9449, z: 1.8268}
+  m_LocalScale: {x: 0.042211, y: 4.9449, z: 2.8264248}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2683,6 +2683,83 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 471828, guid: 19682540d8a014522a319b1cf788aee2, type: 3}
   m_PrefabInstance: {fileID: 1486423452}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1554057367
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1335231892490064077, guid: 39c960029bfff444fb8efad8d27e33e4, type: 3}
+      propertyPath: dialogoNecesario
+      value: PuertaOnInspect
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335231892490064077, guid: 39c960029bfff444fb8efad8d27e33e4, type: 3}
+      propertyPath: dialogoOnUse.dialogo
+      value: "Quiz\xE1s puedo encontrar algo por aqu\xED..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335231892490064077, guid: 39c960029bfff444fb8efad8d27e33e4, type: 3}
+      propertyPath: dialogoOnInspect.dialogo
+      value: "Los dulces est\xE1n en la casa, no el bosque."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795523963883071546, guid: 39c960029bfff444fb8efad8d27e33e4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6.6896
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795523963883071546, guid: 39c960029bfff444fb8efad8d27e33e4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.9891
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795523963883071546, guid: 39c960029bfff444fb8efad8d27e33e4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.887
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795523963883071546, guid: 39c960029bfff444fb8efad8d27e33e4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.925
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795523963883071546, guid: 39c960029bfff444fb8efad8d27e33e4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.562
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795523963883071546, guid: 39c960029bfff444fb8efad8d27e33e4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.98727417
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795523963883071546, guid: 39c960029bfff444fb8efad8d27e33e4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795523963883071546, guid: 39c960029bfff444fb8efad8d27e33e4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.15902767
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795523963883071546, guid: 39c960029bfff444fb8efad8d27e33e4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795523963883071546, guid: 39c960029bfff444fb8efad8d27e33e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795523963883071546, guid: 39c960029bfff444fb8efad8d27e33e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -18.301
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795523963883071546, guid: 39c960029bfff444fb8efad8d27e33e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7406911740672507882, guid: 39c960029bfff444fb8efad8d27e33e4, type: 3}
+      propertyPath: m_Name
+      value: BloqueadorDialogo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 39c960029bfff444fb8efad8d27e33e4, type: 3}
 --- !u!1 &1570616249
 GameObject:
   m_ObjectHideFlags: 0
@@ -3485,6 +3562,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ced2d6e0b1f2c8a4fac924fd63cb4c88, type: 2}
+    - target: {fileID: 7477237229897830199, guid: 23f9269953662c84ca0637399483e410, type: 3}
+      propertyPath: dialogoOnInspect.dialogo
+      value: "Est\xE1 cerrada! Quiz\xE1s puedo encontrar otra forma de entrar."
+      objectReference: {fileID: 0}
     - target: {fileID: 7558568956508172313, guid: 23f9269953662c84ca0637399483e410, type: 3}
       propertyPath: m_Name
       value: Puerta
@@ -3526,3 +3607,4 @@ SceneRoots:
   - {fileID: 1340092934}
   - {fileID: 447833356}
   - {fileID: 1087038978}
+  - {fileID: 1554057367}
