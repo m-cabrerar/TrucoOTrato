@@ -7,4 +7,5 @@ public enum Escena
     BOSQUE_3 = 3,
     PIEZA_1 = 4,
     PIEZA_2 = 5,
+    PIEZA_FIN = 6,
 }
