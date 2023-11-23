@@ -121,7 +121,7 @@ PrefabInstance:
       objectReference: {fileID: 9164181282285690048}
     - target: {fileID: 1335231892490064077, guid: 39c960029bfff444fb8efad8d27e33e4, type: 3}
       propertyPath: dialogoNecesario
-      value: TijerasNecesaria
+      value: TijerasNecesarias
       objectReference: {fileID: 0}
     - target: {fileID: 3795523963883071546, guid: 39c960029bfff444fb8efad8d27e33e4, type: 3}
       propertyPath: m_LocalPosition.x
