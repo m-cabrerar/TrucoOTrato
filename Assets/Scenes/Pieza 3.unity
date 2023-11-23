@@ -3400,9 +3400,11 @@ MonoBehaviour:
   dialogoOnInspect:
     dialogo: "Me mandaron a cuidar esta caja hace cientos de a\xF1os. Me prometieron
       mi comida favorita cuando termine, pero creo que la chef ya ha muerto...\t"
+    duracion: 20
     mostrarUnaVez: 0
   dialogoOnUse:
     dialogo: Mi comida favorita!! Ya no necesito cuidar esta caja!
+    duracion: 15
     mostrarUnaVez: 0
   spawnOnUse: {fileID: 312426603}
   itemNecesario: {fileID: 11400000, guid: 722a83a6fc77180498ec3f46b16d74af, type: 2}

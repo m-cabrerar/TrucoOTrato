@@ -2979,10 +2979,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogoOnInspect:
     dialogo: "Nada de dulces...\t"
+    duracion: 0
     mostrarUnaVez: 0
   dialogoOnUse:
     dialogo: "Hmm, quiz\xE1s si le doy comida al hombre hambriento me deje usar la
       caja..."
+    duracion: 10
     mostrarUnaVez: 0
   spawnOnUse: {fileID: 783669351}
   dialogoNecesario: BloqueadorCajaOnInspect

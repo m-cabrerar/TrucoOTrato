@@ -226,7 +226,11 @@ PrefabInstance:
     - target: {fileID: 513734363996892736, guid: a88a80338234c49419cd82b1f3ca6d91, type: 3}
       propertyPath: dialogoOnInspect.dialogo
       value: "No puedo ver si hay algo en este arbusto... Es muy denso, necesitar\xE9
-        cortarlo."
+        alguna herramienta para cortarlo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 513734363996892736, guid: a88a80338234c49419cd82b1f3ca6d91, type: 3}
+      propertyPath: dialogoOnInspect.duracion
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 576517245642346862, guid: a88a80338234c49419cd82b1f3ca6d91, type: 3}
       propertyPath: m_Name

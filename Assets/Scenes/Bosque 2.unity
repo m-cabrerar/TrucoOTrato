@@ -3117,6 +3117,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 779027411152243227, guid: d61a9480288b7f847824fb10e05ca466, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1142219410081099623, guid: d61a9480288b7f847824fb10e05ca466, type: 3}
       propertyPath: m_Name
       value: Puerta
@@ -3125,6 +3129,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: -382652638819485698, guid: 37eced5fcc7872f4da7c708e9ae91d07, type: 3}
+    - target: {fileID: 3528359694774731801, guid: d61a9480288b7f847824fb10e05ca466, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987636310125892973, guid: d61a9480288b7f847824fb10e05ca466, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096268834954092414, guid: d61a9480288b7f847824fb10e05ca466, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6176209112344765918, guid: d61a9480288b7f847824fb10e05ca466, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3141,6 +3157,10 @@ PrefabInstance:
       propertyPath: dialogoOnInspect.dialogo
       value: "No se abre, parece necesitar alg\xFAn tipo de llave... Quiz\xE1s en
         el bosque encuentre algo que me pueda ayudar!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587681026893116292, guid: d61a9480288b7f847824fb10e05ca466, type: 3}
+      propertyPath: dialogoOnInspect.duracion
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6879029359073181049, guid: d61a9480288b7f847824fb10e05ca466, type: 3}
       propertyPath: m_Materials.Array.data[0]

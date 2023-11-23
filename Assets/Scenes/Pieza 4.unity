@@ -5716,6 +5716,10 @@ PrefabInstance:
       value: "Este bot\xF3n parece activar un portal!"
       objectReference: {fileID: 0}
     - target: {fileID: 4493655144563191879, guid: 43ae19053d9bf354f89b14c31d5da313, type: 3}
+      propertyPath: dialogo.duracion
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493655144563191879, guid: 43ae19053d9bf354f89b14c31d5da313, type: 3}
       propertyPath: dialogo.mostrarUnaVez
       value: 1
       objectReference: {fileID: 0}
