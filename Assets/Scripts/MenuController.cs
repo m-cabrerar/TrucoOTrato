@@ -7,6 +7,7 @@ public class MenuController : MonoBehaviour
 {
     public void Jugar()
     {
+        InventoryController.Instance?.Reset();
         SceneManager.LoadScene((int)Escena.BOSQUE_1);
     }
     public void Salir()

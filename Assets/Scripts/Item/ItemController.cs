@@ -30,6 +30,7 @@ public class ItemController : MonoBehaviour
     private void PickUp()
     {
         InventoryController.Instance.AddItem(itemData);
+        SfxManager.Instance.Play(itemData.sonidoAlAgarrar);
         Destroy(gameObject);
     }
 }

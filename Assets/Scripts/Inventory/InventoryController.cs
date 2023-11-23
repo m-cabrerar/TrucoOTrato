@@ -78,6 +78,7 @@ public class InventoryController : MonoBehaviour
         if (tengoElItem && consumirItemAlUsar)
         {
             _itemsConsumidos.Add(item);
+            SfxManager.Instance.Play(item.sonidoAlUsar);
             RemoveItem(item);
         }
         return tengoElItem;
@@ -98,5 +99,11 @@ public class InventoryController : MonoBehaviour
         item.Drop();
         _inventory?.Remove(item);
         _ui?.RemoveItem(item);
+    }
+
+    public void Reset()
+    {
+        _inventory.Clear();
+        _itemsConsumidos.Clear();
     }
 }

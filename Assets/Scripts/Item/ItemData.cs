@@ -16,6 +16,10 @@ public class ItemData : ScriptableObject
     public Sprite sprite;
     public GameObject itemPrefab;
 
+    [Header("Sonidos")]
+    [SerializeField] public SoundData sonidoAlAgarrar;
+    [SerializeField] public SoundData sonidoAlUsar;
+
     public void PickUp()
     {
         isPickedUp = true;
