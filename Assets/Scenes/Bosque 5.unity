@@ -13502,6 +13502,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cartel
       objectReference: {fileID: 0}
+    - target: {fileID: 5658625012178410445, guid: ac6eff8c18c1a0b4495f85672cee595e, type: 3}
+      propertyPath: m_Name
+      value: Dialogo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
