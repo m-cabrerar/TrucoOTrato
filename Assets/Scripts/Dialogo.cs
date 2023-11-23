@@ -7,5 +7,6 @@ using UnityEngine;
 public struct Dialogo
 {
     [TextArea] public string dialogo;
+    public float duracion;
     public bool mostrarUnaVez;
 }

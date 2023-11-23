@@ -32,9 +32,9 @@ public class DialogoController : MonoBehaviour
     }
     public void MostrarDialogo(Dialogo dialogo, string id)
     {
-        MostrarDialogo(dialogo.dialogo, id, dialogo.mostrarUnaVez);
+        MostrarDialogo(dialogo.dialogo, id, dialogo.mostrarUnaVez, dialogo.duracion == 0 ? dialogoTiempo : dialogo.duracion);
     }
-    public void MostrarDialogo(string dialogo, string id = "", bool mostrarUnaVez = false)
+    public void MostrarDialogo(string dialogo, string id = "", bool mostrarUnaVez = false, float dialogoTiempo = 3f)
     {
         if (dialogo == null || dialogo.Trim().Equals("")) return;
         if (mostrarUnaVez && Mostrado(id)) return;

@@ -13418,6 +13418,89 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4791308605891083057, guid: e80a8925177f5784f8ca762afa110e0b, type: 3}
   m_PrefabInstance: {fileID: 1218945701}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1965655274
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1102244363004077246, guid: 43ae19053d9bf354f89b14c31d5da313, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493655144563191879, guid: 43ae19053d9bf354f89b14c31d5da313, type: 3}
+      propertyPath: dialogo.dialogo
+      value: 'Yippie! Cuantos caramelos! Gracias por ayudarme!
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493655144563191879, guid: 43ae19053d9bf354f89b14c31d5da313, type: 3}
+      propertyPath: dialogo.duracion
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493655144563191879, guid: 43ae19053d9bf354f89b14c31d5da313, type: 3}
+      propertyPath: dialogo.mostrarUnaVez
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6125492502090695779, guid: 43ae19053d9bf354f89b14c31d5da313, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 11.649904
+      objectReference: {fileID: 0}
+    - target: {fileID: 6125492502090695779, guid: 43ae19053d9bf354f89b14c31d5da313, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6.60073
+      objectReference: {fileID: 0}
+    - target: {fileID: 6125492502090695779, guid: 43ae19053d9bf354f89b14c31d5da313, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.3283062
+      objectReference: {fileID: 0}
+    - target: {fileID: 6125492502090695779, guid: 43ae19053d9bf354f89b14c31d5da313, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6125492502090695779, guid: 43ae19053d9bf354f89b14c31d5da313, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.438266
+      objectReference: {fileID: 0}
+    - target: {fileID: 6125492502090695779, guid: 43ae19053d9bf354f89b14c31d5da313, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6125492502090695779, guid: 43ae19053d9bf354f89b14c31d5da313, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6125492502090695779, guid: 43ae19053d9bf354f89b14c31d5da313, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6125492502090695779, guid: 43ae19053d9bf354f89b14c31d5da313, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6125492502090695779, guid: 43ae19053d9bf354f89b14c31d5da313, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6125492502090695779, guid: 43ae19053d9bf354f89b14c31d5da313, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6125492502090695779, guid: 43ae19053d9bf354f89b14c31d5da313, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7410405506279563158, guid: 43ae19053d9bf354f89b14c31d5da313, type: 3}
+      propertyPath: m_Name
+      value: DialogoTrigger
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 43ae19053d9bf354f89b14c31d5da313, type: 3}
 --- !u!1001 &1971374262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14453,3 +14536,4 @@ SceneRoots:
   - {fileID: 162492960}
   - {fileID: 464810988}
   - {fileID: 398664965}
+  - {fileID: 1965655274}
