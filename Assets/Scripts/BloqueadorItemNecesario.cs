@@ -19,6 +19,11 @@ public class BloqueadorItemNecesario : Bloqueador
         if (InventoryController.Instance.FueConsumido(itemNecesario))
         {
             Destroy(gameObject);
+            if (spawnOnUse != null) spawnOnUse.SetActive(true);
+        }
+        else
+        {
+            if (spawnOnUse != null) spawnOnUse.SetActive(false);
         }
     }
     

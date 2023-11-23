@@ -15,6 +15,11 @@ public class BloqueadorDialogo : Bloqueador
         if (DialogoController.Instance.Mostrado(dialogoNecesario))
         {
             Destroy(gameObject);
+            if (spawnOnUse != null) spawnOnUse.SetActive(true);
+        }
+        else
+        {
+            if (spawnOnUse != null) spawnOnUse.SetActive(false);
         }
     }
     

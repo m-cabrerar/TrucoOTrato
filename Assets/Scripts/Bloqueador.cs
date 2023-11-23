@@ -7,6 +7,7 @@ public abstract class Bloqueador : MonoBehaviour
 {
     [SerializeField] private Dialogo dialogoOnInspect;
     [SerializeField] private Dialogo dialogoOnUse;
+    [SerializeField] protected GameObject spawnOnUse;
 
     private void OnCollisionEnter(Collision other)
     {
@@ -15,6 +16,7 @@ public abstract class Bloqueador : MonoBehaviour
         {
             Destroy(gameObject);
             DialogoController.Instance.MostrarDialogo(dialogoOnUse, gameObject.name + "OnUse");
+            if (spawnOnUse != null) spawnOnUse.SetActive(true);
         }
         else
             DialogoController.Instance.MostrarDialogo(dialogoOnInspect, gameObject.name + "OnInspect");
