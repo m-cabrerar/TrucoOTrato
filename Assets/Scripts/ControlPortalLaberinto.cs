@@ -1,51 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ControlPortalLaberinto : MonoBehaviour
 {
-    public Transform portalLab;
+    [SerializeField] private Transform portalLab;
+    [SerializeField] private float velocMov = 1.0f;
+    [SerializeField] private float tiempoEspera = 6.0f;
+    [SerializeField] private PulsadorController[] pulsadores;
 
-    public float velocMov = 1.0f;
-
-    public bool pulsador3Activado = true;
     private Vector3 posicionOriginal;
-    private Vector3 nuevaPosicion = new Vector3(8.5f, -1f, -17.5f);
+    private Vector3 nuevaPosicion;
+    private float tiempoTranscurrido = 0.0f;
     
-    float tiempoEspera = 6.0f;
-    float tiempoTranscurrido = 0.0f;
     // Start is called before the first frame update
     void Start()
     {
         posicionOriginal = portalLab.position;
+        nuevaPosicion = new Vector3(portalLab.position.x, portalLab.position.y + 2f, portalLab.position.z);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (pulsador3Activado)
+        if (pulsadores.Length == 0 || pulsadores.All(p => p.isActive()))
         {
-            if (tiempoTranscurrido < tiempoEspera)
-            {
-                tiempoTranscurrido += Time.deltaTime;
-            }
-            else
-            {
-                portalLab.position =
-                    Vector3.Lerp(portalLab.position, nuevaPosicion, velocMov * Time.deltaTime);
-            }
-            
+            tiempoTranscurrido = 0.0f;
+            portalLab.position = Vector3.Lerp(portalLab.position, nuevaPosicion, velocMov * Time.deltaTime);
         }
         else
         {
-            tiempoTranscurrido = 0.0f;
-            portalLab.position =
-                Vector3.Lerp(portalLab.position, posicionOriginal, velocMov * Time.deltaTime);
+            if (tiempoTranscurrido < tiempoEspera)
+                tiempoTranscurrido += Time.deltaTime;
+            else
+                portalLab.position = Vector3.Lerp(portalLab.position, posicionOriginal, velocMov * Time.deltaTime);
         }
-    }
-
-    public void setPulsador3(bool activado)
-    {
-        pulsador3Activado = activado;
     }
 }
