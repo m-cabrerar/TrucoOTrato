@@ -38,10 +38,6 @@ public class DialogoController : MonoBehaviour
     {
         if (dialogo == null || dialogo.Trim().Equals("")) return;
         if (mostrarUnaVez && Mostrado(id)) return;
-        foreach (var d in dialogosMostrados)
-        {
-            Debug.Log(d);
-        }
         dialogosMostrados.Add(id);
         this.dialogo.text = dialogo;
         gameObject.SetActive(true);
