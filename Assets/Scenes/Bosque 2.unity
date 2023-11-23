@@ -3032,6 +3032,11 @@ PrefabInstance:
       propertyPath: itemNecesario
       value: 
       objectReference: {fileID: 11400000, guid: 025c0ebfeb5cb9044b0fa6156ac925f2, type: 2}
+    - target: {fileID: 6587681026893116292, guid: d61a9480288b7f847824fb10e05ca466, type: 3}
+      propertyPath: dialogoOnInspect.dialogo
+      value: "No se abre, parece necesitar alg\xFAn tipo de llave... Quiz\xE1s en
+        el bosque encuentre algo que me pueda ayudar!"
+      objectReference: {fileID: 0}
     - target: {fileID: 6879029359073181049, guid: d61a9480288b7f847824fb10e05ca466, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

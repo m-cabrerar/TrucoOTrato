@@ -2903,7 +2903,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4493655144563191879, guid: 43ae19053d9bf354f89b14c31d5da313, type: 3}
       propertyPath: dialogo.dialogo
-      value: '"Esteban Quito, el carpitero"'
+      value: '"Esteban Quito, el carpintero"'
       objectReference: {fileID: 0}
     - target: {fileID: 6125492502090695779, guid: 43ae19053d9bf354f89b14c31d5da313, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5114,6 +5114,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 471828, guid: 19682540d8a014522a319b1cf788aee2, type: 3}
   m_PrefabInstance: {fileID: 874827482}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &848301882 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6473289392299665909, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
+  m_PrefabInstance: {fileID: 2126598463}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &848301886
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848301882}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5066841580029693849, guid: 8e204af8681eb324b9231b09940ee91b, type: 3}
 --- !u!1001 &848428272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6407,6 +6434,10 @@ PrefabInstance:
     - target: {fileID: 3191531089810952212, guid: 7c68dc3d248c5b6488f7564a13e39c64, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4073718860163076649, guid: 7c68dc3d248c5b6488f7564a13e39c64, type: 3}
+      propertyPath: dialogoTiempo
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4274161955710514281, guid: 7c68dc3d248c5b6488f7564a13e39c64, type: 3}
       propertyPath: playerPosition.y
@@ -8315,7 +8346,7 @@ Transform:
   m_GameObject: {fileID: 1340520368}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.5200192, z: -0, w: 0.85415465}
-  m_LocalPosition: {x: 12.7, y: 1.96, z: 1.68}
+  m_LocalPosition: {x: 13.61, y: 1.96, z: 1.84}
   m_LocalScale: {x: 16.81, y: 2.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11128,7 +11159,7 @@ Transform:
   m_GameObject: {fileID: 1786381371}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.0662228, z: -0, w: 0.9978049}
-  m_LocalPosition: {x: 6.17, y: 1.96, z: 7.22}
+  m_LocalPosition: {x: 5.93, y: 1.96, z: 7.98}
   m_LocalScale: {x: 16.81, y: 2.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13639,7 +13670,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6473289392299665909, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 848301886}
   m_SourcePrefab: {fileID: 100100000, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
 --- !u!1001 &1360493424296177251
 PrefabInstance:
