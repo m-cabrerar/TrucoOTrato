@@ -28,9 +28,19 @@ public class MoverPersonaje : MonoBehaviour
     {
         movimientoHorizontal = Input.GetAxis("Horizontal");
         movimientoVertical = Input.GetAxis("Vertical");
+        
+        Camera main = Camera.main ?? Camera.current;
+        
+        Vector3 forward = main.transform.forward;
+        forward.y = 0;
+        forward.Normalize();
+        
+        Vector3 right = main.transform.right;
+        right.y = 0;
+        right.Normalize();
 
         //Calcula vector de movimiento
-        Vector3 movimiento = new Vector3(movimientoHorizontal, 0.0f, movimientoVertical);
+        Vector3 movimiento = forward * movimientoVertical + right * movimientoHorizontal;
 
         //Apuntar el frente del personaje hacia la dirección del movimiento
         if(movimiento != Vector3.zero)
